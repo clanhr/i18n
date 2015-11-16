@@ -3,4 +3,4 @@
             [clanhr.i18n.core :as i18n]))
 
 (deftest smoke-test
-  (is (= "test" (i18n/t :pt "test"))))
+  (is (= "Férias" (i18n/t :pt "absence-vacations"))))
