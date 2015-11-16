@@ -3,6 +3,14 @@
   (:require [cheshire.core :refer :all]))
 
 (def required-keys [:absence-vacations
+                    :absence-maternity-leave
+                    :absence-paternity-leave
+                    :absence-death-license
+                    :absence-marriage-license
+                    :absence-medical
+                    :absence-education
+                    :absence-justified
+                    :absence-unjustified
                     :absence-family])
 
 (defn- sync-locale
