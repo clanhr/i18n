@@ -1,7 +1,6 @@
 (ns clanhr.i18n.core
   "Utilities for i18n"
-  (:require [taoensso.tower :as tower]
-            [clanhr.i18n.pt :as pt]
+  (:require [clanhr.i18n.pt :as pt]
             [clanhr.i18n.en :as en]
             [clanhr.i18n.es :as es]))
 
@@ -10,8 +9,6 @@
                 :en en/data
                 :es es/data}
    :fallback-locale :en})
-
-#_(def tower-t (tower/make-t config))
 
 (defn t
   "Translates tokens given a language"
