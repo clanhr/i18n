@@ -13,15 +13,22 @@
                     :absence-unjustified
                     :absence-family])
 
+(defn- generate-code-file
+  "Generates a valid clj code file"
+  [lang m]
+  (str "(ns clanhr.i18n." (name lang) ")"
+       "(def data " m ")"))
+
 (defn- sync-locale
   "Syncs a specific locale"
   [lang file]
-  (let [out-file (str "resources/" (name lang) ".edn")]
+  (let [out-file (str "src/clanhr/i18n/" (name lang) ".clj")]
     (-> (slurp file)
         (parse-string true)
         (select-keys required-keys)
         (->> (map (fn [[k v]] [k (get v :message)]))
              (into {})
+             (generate-code-file lang)
              (spit out-file)))
     (println "Wrote" out-file)))
 
