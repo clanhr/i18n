@@ -10,6 +10,7 @@
 
 (def tower-t (tower/make-t my-tconfig))
 
-(def t
+(defn t
   "Translates tokens given a language"
-  tower-t)
+  [lang token]
+  (tower-t (keyword lang) (keyword token)))
