@@ -1,2 +1,1 @@
-# i18n
-i18n utilities on clojure
+# ClanHR i18n [![Build Status](https://travis-ci.org/clanhr/i18n.svg)](https://travis-ci.org/clanhr/i18n)
