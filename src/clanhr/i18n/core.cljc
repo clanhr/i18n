@@ -1,16 +1,17 @@
 (ns clanhr.i18n.core
   "Utilities for i18n"
-  (:require [taoensso.tower :as tower]))
+  (:require [clanhr.i18n.pt :as pt]
+            [clanhr.i18n.en :as en]
+            [clanhr.i18n.es :as es]))
 
-(def my-tconfig
-  {:dictionary {:pt "pt.edn"
-                :en "en.edn"
-                :es "es.edn"}
+(def config
+  {:dictionary {:pt pt/data
+                :en en/data
+                :es es/data}
    :fallback-locale :en})
-
-(def tower-t (tower/make-t my-tconfig))
 
 (defn t
   "Translates tokens given a language"
   [lang token]
-  (tower-t (keyword lang) (keyword token)))
+  (or (get-in config [:dictionary (keyword lang) (keyword token)])
+      (get-in config [:dictionary (:fallback-locale config) (keyword token)])))
