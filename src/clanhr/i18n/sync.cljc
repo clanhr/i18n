@@ -11,7 +11,23 @@
                     :absence-education
                     :absence-justified
                     :absence-unjustified
-                    :absence-family])
+                    :absence-family
+                    :name
+                    :birth-date
+                    :civil-state
+                    :nationality
+                    :email
+                    :phone
+                    :idcard
+                    :address
+                    :deficients
+                    :dependents
+                    :vat-number
+                    :other-document
+                    :income-ownership
+                    :phone-country-number
+                    :social-security-number
+                    ])
 
 (defn- generate-code-file
   "Generates a valid clj code file"
