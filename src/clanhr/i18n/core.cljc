@@ -14,4 +14,5 @@
   "Translates tokens given a language"
   [lang token]
   (or (get-in config [:dictionary (keyword lang) (keyword token)])
-      (get-in config [:dictionary (:fallback-locale config) (keyword token)])))
+      (get-in config [:dictionary (:fallback-locale config) (keyword token)])
+      (str "?" token "-" lang "?")))

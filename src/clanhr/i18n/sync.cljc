@@ -33,6 +33,20 @@
                     :income-ownership
                     :phone-country-number
                     :social-security-number
+
+                    ;; reports
+                    :vacations-and-absences-excel-file
+                    :vacations-balance-excel-file
+                    :type
+                    :total-vacations
+                    :used-days
+                    :scheduled-days
+                    :free-days
+                    :start-date
+                    :end-date
+                    :total
+                    :unit
+
                     ])
 
 (defn- generate-code-file

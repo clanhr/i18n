@@ -3,6 +3,8 @@
             [clanhr.i18n.core :as i18n]))
 
 (deftest smoke-test
+  (testing "unknown"
+    (is (= "?waza-en?" (i18n/t "en" "waza"))))
   (testing "English language"
     (is (= "Vacations" (i18n/t "en" "absence-vacations")))
     (is (= "Vacations" (i18n/t "en" :absence-vacations)))
