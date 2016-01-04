@@ -14,6 +14,12 @@
                     :absence-family
                     :name
                     :birth-date
+                    :linkedin
+                    :facebook
+                    :bank-account
+                    :twitter
+                    :emergency-contact
+                    :deficients
                     :civil-state
                     :nationality
                     :email
