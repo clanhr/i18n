@@ -4,7 +4,8 @@
 
 (deftest smoke-test
   (testing "unknown"
-    (is (= "?waza-en?" (i18n/t "en" "waza"))))
+    (is (= "?waza?" (i18n/t "en" "waza")))
+    (is (= "?waza?" (i18n/t "en" :waza))))
   (testing "English language"
     (is (= "Vacations" (i18n/t "en" "absence-vacations")))
     (is (= "Vacations" (i18n/t "en" :absence-vacations)))
