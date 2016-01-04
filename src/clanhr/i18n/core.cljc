@@ -12,7 +12,10 @@
 
 (defn t
   "Translates tokens given a language"
-  [lang token]
-  (or (get-in config [:dictionary (keyword lang) (keyword token)])
-      (get-in config [:dictionary (:fallback-locale config) (keyword token)])
-      (str "?" (name token) "?")))
+  ([lang token]
+   (t lang token nil))
+  ([lang token default-text]
+   (or (get-in config [:dictionary (keyword lang) (keyword token)])
+       default-text
+       (get-in config [:dictionary (:fallback-locale config) (keyword token)])
+       (str "?" (name token) "?"))))

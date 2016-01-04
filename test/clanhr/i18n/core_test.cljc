@@ -3,6 +3,8 @@
             [clanhr.i18n.core :as i18n]))
 
 (deftest smoke-test
+  (testing "default"
+    (is (= "Waza" (i18n/t "en" "asdasdasdadasdasds" "Waza"))))
   (testing "unknown"
     (is (= "?waza?" (i18n/t "en" "waza")))
     (is (= "?waza?" (i18n/t "en" :waza))))
