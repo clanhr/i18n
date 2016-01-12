@@ -18,6 +18,8 @@
                     :facebook
                     :bank-account
                     :twitter
+                    :hours
+                    :days
                     :emergency-contact
                     :deficients
                     :civil-state
