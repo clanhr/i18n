@@ -40,10 +40,10 @@
                     :vacations-and-absences-excel-file
                     :vacations-balance-excel-file
                     :type
-                    :total-vacations
-                    :used-days
-                    :scheduled-days
-                    :free-days
+                    :totalDays
+                    :enjoyedDays
+                    :scheduledDays
+                    :freeDays
                     :start-date
                     :end-date
                     :total
