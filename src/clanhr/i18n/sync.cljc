@@ -16,13 +16,37 @@
                     :birth-date
                     :linkedin
                     :facebook
-                    :bank-account
                     :twitter
                     :hours
                     :days
-                    :emergency-contact
+                    :emergency-contact.contact-name
+                    :emergency-contact.relationship
+                    :emergency-contact.phone
+                    :emergency-contact.phone-country-number
+                    :about-me
+                    :school.school-degree
+                    :school.school-name
+                    :school.school-course
+                    :bank-account.bank-name
+                    :bank-account.iban
+                    :bank-account.swift
+                    :fiscal-address.street
+                    :fiscal-address.district
+                    :fiscal-address.zip-code
+                    :fiscal-address.city
+                    :fiscal-address.parish
+                    :fiscal-address.country-code
+                    :fiscal-address.country-name
+                    :address.street
+                    :address.district
+                    :address.zip-code
+                    :address.city
+                    :address.parish
+                    :address.country-code
+                    :address.country-name
+
                     :deficients
-                    :civil-state
+                    :civil-status
                     :nationality
                     :email
                     :phone
