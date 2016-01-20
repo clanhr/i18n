@@ -27,6 +27,8 @@
                     :school.school-degree
                     :school.school-name
                     :school.school-course
+                    :school.school-name
+                    :school.course
                     :bank-account.bank-name
                     :bank-account.iban
                     :bank-account.swift
@@ -59,6 +61,7 @@
                     :income-ownership
                     :phone-country-number
                     :social-security-number
+                    :phone-country-code
 
                     ;; reports
                     :vacations-and-absences-excel-file
