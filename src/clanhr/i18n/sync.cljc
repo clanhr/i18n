@@ -47,16 +47,6 @@
                     :address.country-code
                     :address.country-name
 
-                    :absence-maternity-leave
-                    :absence-paternity-leave
-                    :absence-education
-                    :absence-medical
-                    :absence-justified
-                    :absence-family
-                    :absence-unjustified
-                    :absence-marriage-license
-                    :absence-death-license
-
                     :deficients
                     :civil-status
                     :nationality
