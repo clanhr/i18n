@@ -79,24 +79,24 @@
                     ;;contracts
 
                     :no-term
-                    :no-term-partial¬
-                    :intermittent¬
-                    :intermittent-partial¬
-                    :fixed-term¬
-                    :fixed-term-partial¬
-                    :not-fixed-term¬
-                    :not-fixed-term-partial¬
-                    :very-short-duration¬
-                    :telework¬
-                    :telework-partial¬
-                    :service-commission¬
-                    :service-commission-partial¬
-                    :fixed-term-temporary¬
-                    :fixed-term-temporary-partial¬
-                    :not-fixed-term-temporary¬
-                    :not-fixed-term-temporary-partial¬
-                    :unbounded-time-temporary¬
-                    :unbounded-time-temporary-partial¬
+                    :no-term-partial
+                    :intermittent
+                    :intermittent-partial
+                    :fixed-term
+                    :fixed-term-partial
+                    :not-fixed-term
+                    :not-fixed-term-partial
+                    :very-short-duration
+                    :telework
+                    :telework-partial
+                    :service-commission
+                    :service-commission-partial
+                    :fixed-term-temporary
+                    :fixed-term-temporary-partial
+                    :not-fixed-term-temporary
+                    :not-fixed-term-temporary-partial
+                    :unbounded-time-temporary
+                    :unbounded-time-temporary-partial
                     :internship
 
                     ])
