@@ -62,6 +62,7 @@
                     :phone-country-number
                     :social-security-number
                     :phone-country-code
+                    :colaborator-id
 
                     ;; reports
                     :vacations-and-absences-excel-file
