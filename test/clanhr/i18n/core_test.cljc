@@ -5,6 +5,8 @@
 (deftest smoke-test
   (testing "default"
     (is (= "Waza" (i18n/t "en" "asdasdasdadasdasds" "Waza"))))
+  (testing "nil"
+    (is (= nil (i18n/t "en" nil))))
   (testing "unknown"
     (is (= "?waza?" (i18n/t "en" "waza")))
     (is (= "?waza?" (i18n/t "en" :waza))))

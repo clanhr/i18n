@@ -15,7 +15,8 @@
   ([lang token]
    (t lang token nil))
   ([lang token default-text]
-   (or (get-in config [:dictionary (keyword lang) (keyword token)])
-       default-text
-       (get-in config [:dictionary (:fallback-locale config) (keyword token)])
-       (str "?" (name token) "?"))))
+   (when token
+     (or (get-in config [:dictionary (keyword lang) (keyword token)])
+         default-text
+         (get-in config [:dictionary (:fallback-locale config) (keyword token)])
+         (str "?" (name token) "?")))))
