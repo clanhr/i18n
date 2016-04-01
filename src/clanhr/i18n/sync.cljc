@@ -47,6 +47,26 @@
                     :address.country-code
                     :address.country-name
 
+                    :personal-data
+                    :company-data
+                    :personal-email
+                    :personal-phone
+                    :professional-email
+                    :professional-phone
+                    :cost-center
+
+                    :salary
+                    :expenses
+                    :iht
+                    :food-allowance
+                    :salary-observations
+
+                    :teams
+                    :projects
+                    :job-position
+                    :job-description
+                    :approver
+
                     :deficients
                     :civil-status
                     :nationality
@@ -64,6 +84,12 @@
                     :phone-country-code
                     :colaborator-id
 
+                    :married
+                    :single
+                    :divorced
+                    :widowed
+                    :civil-union
+
                     ;; reports
                     :vacations-and-absences-excel-file
                     :vacations-balance-excel-file
@@ -79,6 +105,10 @@
 
                     ;;contracts
 
+                    :contract-type
+                    :contract-start-date
+                    :contract-end-date
+                    :contract-observations
                     :no-term
                     :no-term-partial
                     :intermittent
