@@ -24,7 +24,7 @@
                     :emergency-contact.phone
                     :emergency-contact.phone-country-number
                     :about-me
-                    :school.school-degree
+                    :degree
                     :school.school-name
                     :school.school-course
                     :school.school-name
@@ -46,6 +46,15 @@
                     :address.parish
                     :address.country-code
                     :address.country-name
+
+                    :basic-education-1
+                    :basic-education-2
+                    :basic-education-3
+                    :high-school
+                    :associates-degree
+                    :bachelors-degree
+                    :masters-degree
+                    :doctoral-degree
 
                     :personal-data
                     :company-data
