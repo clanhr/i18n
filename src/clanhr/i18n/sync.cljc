@@ -102,6 +102,7 @@
                     ;; reports
                     :vacations-and-absences-excel-file
                     :vacations-balance-excel-file
+                    :users-excel-file
                     :type
                     :totalDays
                     :enjoyedDays
