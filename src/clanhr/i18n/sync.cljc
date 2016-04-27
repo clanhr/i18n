@@ -26,6 +26,7 @@
                     :about-me
                     :degree
                     :school.school-name
+                    :school.school-degree
                     :school.school-course
                     :school.school-name
                     :school.course
@@ -73,8 +74,11 @@
                     :teams
                     :projects
                     :job-position
+                    :position
                     :job-description
                     :approver
+                    :approver-name
+                    :approver-email
 
                     :deficients
                     :civil-status
