@@ -99,6 +99,10 @@
                     :widowed
                     :civil-union
 
+                    :income-ownership
+                    :handicap
+                    :number-of-dependents
+
                     ;; reports
                     :vacations-and-absences-excel-file
                     :vacations-balance-excel-file
