@@ -100,7 +100,13 @@
                     :civil-union
 
                     :income-ownership
+                    :1-titular
+                    :2-titulars
                     :handicap
+                    :not
+                    :spouse
+                    :declarant
+                    :dependent
                     :number-of-dependents
 
                     ;; reports
