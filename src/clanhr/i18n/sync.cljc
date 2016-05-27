@@ -80,6 +80,11 @@
                     :approver-name
                     :approver-email
 
+                    :section
+                    :field
+                    :old-value
+                    :new-value
+
                     :deficients
                     :civil-status
                     :nationality
