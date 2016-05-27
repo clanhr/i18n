@@ -63,7 +63,7 @@
                     :personal-phone
                     :professional-email
                     :professional-phone
-                    :cost-center
+                    :cost-centers
 
                     :salary
                     :expenses
