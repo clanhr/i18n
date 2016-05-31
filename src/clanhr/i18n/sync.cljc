@@ -121,6 +121,7 @@
                     ;; reports
                     :vacations-and-absences-excel-file
                     :vacations-balance-excel-file
+                    :user-changes-excel-file
                     :users-excel-file
                     :type
                     :totalDays
