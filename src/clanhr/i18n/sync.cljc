@@ -2,16 +2,83 @@
   "Generates the edn files needed on the clojure side"
   (:require [cheshire.core :refer :all]))
 
-(def required-keys [:absence-vacations
-                    :absence-maternity-leave
-                    :absence-paternity-leave
-                    :absence-death-license
-                    :absence-marriage-license
-                    :absence-medical
-                    :absence-education
-                    :absence-justified
-                    :absence-unjustified
-                    :absence-family
+
+(def mapping
+  {:abscence.type.vacations         :absence-vacations
+   :abscence.type.maternity-leave   :absence-maternity-leave
+   :abscence.type.paternity-leave   :absence-paternity-leave
+   :abscence.type.death-license     :absence-death-license
+   :abscence.type.marriage-license  :absence-marriage-license
+   :abscence.type.medical           :absence-medical
+   :abscence.type.education         :absence-education
+   :abscence.type.justified         :absence-justified
+   :abscence.type.unjustified       :absence-unjustified
+   :abscence.type.family            :absence-family
+
+   :academic.degree                   :degree
+   :academic.degree.basic-education-1 :basic-education-1
+   :academic.degree.basic-education-2 :basic-education-2
+   :academic.degree.basic-education-3 :basic-education-3
+   :academic.degree.high-school       :high-school
+   :academic.degree.associates-degree :associates-degree
+   :academic.degree.bachelors-degree  :bachelors-degree
+   :academic.degree.masters-degree    :masters-degree
+   :academic.degree.doctoral-degree   :doctoral-degree
+
+
+   :civil-status             :civil-status
+   :civil.status.married     :married
+   :civil.status.single      :single
+   :civil.status.divorced    :divorced
+   :civil.status.widowed     :widowed
+   :civil.status.civil-union :civil-union
+
+
+   :fiscal.information.income.payee            :income-owership
+   :fiscal.information.income.payee.1-titular  :1-titular
+   :fiscal.information.income.payee.2-titulars :2-titulars
+
+   :fiscal.information.handicap             :handicap
+   :fiscal.information.spouse               :spouse
+   :fiscal.information.declarant            :declarant
+   :fiscal.information.dependent            :dependent
+   :fiscal.information.number-of-dependents :number-of-dependents
+
+   :type.contract :contract-type
+   :contract.list.contract.type.fixed-term                       :fixed-term
+   :contract.list.contract.type.no-term                          :no-term
+   :contract.list.contract.type.intermittent                     :intermittent
+   :contract.list.contract.type.intermittent-partial             :intermittent-partial
+   :contract.list.contract.type.fixed-term-partial               :fixed-term-partial
+   :contract.list.contract.type.not-fixed-term                   :not-fixed-term
+   :contract.list.contract.type.not-fixed-term-partial           :not-fixed-term-partial
+   :contract.list.contract.type.very-short-duration              :very-short-duration
+   :contract.list.contract.type.telework                         :telework
+   :contract.list.contract.type.telework-partial                 :telework-partial
+   :contract.list.contract.type.service-commission               :service-commission
+   :contract.list.contract.type.service-commission-partial       :service-commission-partial
+   :contract.list.contract.type.fixed-term-temporary             :fixed-term-temporary
+   :contract.list.contract.type.fixed-term-temporary-partial     :fixed-term-temporary-partial
+   :contract.list.contract.type.not-fixed-term-temporary         :not-fixed-term-temporary
+   :contract.list.contract.type.not-fixed-term-temporary-partial :not-fixed-term-temporary-partial
+   :contract.list.contract.type.unbounded-time-temporary         :unbounded-time-temporary
+   :contract.list.contract.type.unbounded-time-temporary-partial :unbounded-time-temporary-partial
+   :contract.list.contract.type.internship                       :internship
+   })
+
+(def required-keys [
+                    ;; Absence types
+                    :abscence.type.vacations
+                    :abscence.type.maternity-leave
+                    :abscence.type.paternity-leave
+                    :abscence.type.death-license
+                    :abscence.type.marriage-license
+                    :abscence.type.medical
+                    :abscence.type.education
+                    :abscence.type.justified
+                    :abscence.type.unjustified
+                    :abscence.type.family
+
                     :name
                     :birth-date
                     :linkedin
@@ -24,7 +91,6 @@
                     :emergency-contact.phone
                     :emergency-contact.phone-country-number
                     :about-me
-                    :degree
                     :school.school-name
                     :school.school-degree
                     :school.school-course
@@ -48,15 +114,6 @@
                     :address.country-code
                     :address.country-name
 
-                    :basic-education-1
-                    :basic-education-2
-                    :basic-education-3
-                    :high-school
-                    :associates-degree
-                    :bachelors-degree
-                    :masters-degree
-                    :doctoral-degree
-
                     :personal-data
                     :company-data
                     :personal-email
@@ -71,6 +128,7 @@
                     :food-allowance
                     :salary-observations
 
+                    :tags
                     :teams
                     :projects
                     :job-position
@@ -86,7 +144,6 @@
                     :new-value
 
                     :deficients
-                    :civil-status
                     :nationality
                     :email
                     :phone
@@ -102,21 +159,36 @@
                     :phone-country-code
                     :colaborator-id
 
-                    :married
-                    :single
-                    :divorced
-                    :widowed
-                    :civil-union
+                    ;; civil status
+                    :civil.status
+                    :civil.status.married
+                    :civil.status.single
+                    :civil.status.divorced
+                    :civil.status.widowed
+                    :civil.status.civil-union
 
-                    :income-ownership
-                    :1-titular
-                    :2-titulars
-                    :handicap
-                    :not
-                    :spouse
-                    :declarant
-                    :dependent
-                    :number-of-dependents
+                    ;; fiscal info
+                    :fiscal.information.income.payee
+                    :fiscal.information.income.payee.1-titular
+                    :fiscal.information.income.payee.2-titulars
+
+                    :fiscal.information.handicap
+                    :fiscal.information.spouse
+                    :fiscal.information.declarant
+                    :fiscal.information.dependent
+                    :fiscal.information.number-of-dependents
+
+                    ;; Acadmics
+                    :academic.course
+                    :academic.degree
+                    :academic.degree.basic-education-1
+                    :academic.degree.basic-education-2
+                    :academic.degree.basic-education-3
+                    :academic.degree.high-school
+                    :academic.degree.associates-degree
+                    :academic.degree.bachelors-degree
+                    :academic.degree.masters-degree
+                    :academic.degree.doctoral-degree
 
                     ;; reports
                     :vacations-and-absences-excel-file
@@ -135,30 +207,31 @@
 
                     ;;contracts
 
-                    :contract-type
+                    :type.contract :contract-type
                     :contract-start-date
                     :contract-end-date
                     :contract-observations
-                    :no-term
-                    :no-term-partial
-                    :intermittent
-                    :intermittent-partial
-                    :fixed-term
-                    :fixed-term-partial
-                    :not-fixed-term
-                    :not-fixed-term-partial
-                    :very-short-duration
-                    :telework
-                    :telework-partial
-                    :service-commission
-                    :service-commission-partial
-                    :fixed-term-temporary
-                    :fixed-term-temporary-partial
-                    :not-fixed-term-temporary
-                    :not-fixed-term-temporary-partial
-                    :unbounded-time-temporary
-                    :unbounded-time-temporary-partial
-                    :internship
+
+                    :contract.list.contract.type.fixed-term
+                    :contract.list.contract.type.fixed-term-partial
+                    :contract.list.contract.type.no-term
+                    :contract.list.contract.type.intermittent
+                    :contract.list.contract.type.intermittent-partial
+                    :contract.list.contract.type.fixed-term-partial
+                    :contract.list.contract.type.not-fixed-term
+                    :contract.list.contract.type.not-fixed-term-partial
+                    :contract.list.contract.type.very-short-duration
+                    :contract.list.contract.type.telework
+                    :contract.list.contract.type.telework-partial
+                    :contract.list.contract.type.service-commission
+                    :contract.list.contract.type.service-commission-partial
+                    :contract.list.contract.type.fixed-term-temporary
+                    :contract.list.contract.type.fixed-term-temporary-partial
+                    :contract.list.contract.type.not-fixed-term-temporary
+                    :contract.list.contract.type.not-fixed-term-temporary-partial
+                    :contract.list.contract.type.unbounded-time-temporary
+                    :contract.list.contract.type.unbounded-time-temporary-partial
+                    :contract.list.contract.type.internship
 
                     ])
 
@@ -168,6 +241,12 @@
   (str "(ns clanhr.i18n." (name lang) ")"
        "(def data " m ")"))
 
+(defn- map-new->old-keys
+  [k]
+  (if-let [old (get mapping k)]
+    old
+    k))
+
 (defn- sync-locale
   "Syncs a specific locale"
   [lang file]
@@ -175,7 +254,8 @@
     (-> (slurp file)
         (parse-string true)
         (select-keys required-keys)
-        (->> (map (fn [[k v]] [k (get v :message)]))
+        (->> (map (fn [[k v]]
+                    [(map-new->old-keys k) v ]))
              (into {})
              (generate-code-file lang)
              (spit out-file)))
@@ -184,7 +264,7 @@
 (defn sync-data
   "Syncs data"
   []
-  (sync-locale :pt "../frontend/js/locales/PT.json")
-  (sync-locale :en "../frontend/js/locales/EN.json")
-  (sync-locale :es "../frontend/js/locales/ES.json")
+  (sync-locale :pt "../frontend/app/src/locales/pt.json")
+  (sync-locale :en "../frontend/app/src/locales/en.json")
+  (sync-locale :es "../frontend/app/src/locales/es.json")
   (shutdown-agents))
