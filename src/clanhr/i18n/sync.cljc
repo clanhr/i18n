@@ -26,7 +26,7 @@
    :academic.degree.doctoral-degree   :doctoral-degree
 
 
-   :civil-status             :civil-status
+   :civil-status             :civil.status
    :civil.status.married     :married
    :civil.status.single      :single
    :civil.status.divorced    :divorced
