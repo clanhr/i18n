@@ -25,8 +25,15 @@
    :academic.degree.masters-degree    :masters-degree
    :academic.degree.doctoral-degree   :doctoral-degree
 
+   :pro.email       :professional-email
+   :pro.telephone   :professional-phone
+   :job.role        :job-position
+   :manager         :approver
+
    :personal.email           :personal-email
-   :personal.phone           :personal-phone
+   :personal.telephone       :personal-phone
+
+   :fiscal.information.number.dependants :number-of-dependents
 
    :civil.status             :civil-status
    :civil.status.married     :married
@@ -35,15 +42,20 @@
    :civil.status.widowed     :widowed
    :civil.status.civil-union :civil-union
 
+   :academic.course                         :school.school-course
+   :cost.center                             :cost-centers
 
    :fiscal.information.income.payee            :income-owership
    :fiscal.information.income.payee.1-titular  :1-titular
    :fiscal.information.income.payee.2-titulars :2-titulars
 
    :fiscal.information.handicap             :handicap
-   :fiscal.information.spouse               :spouse
-   :fiscal.information.declarant            :declarant
-   :fiscal.information.dependent            :dependent
+   :fiscal.information.handicap.declarant   :declarant
+   :fiscal.information.handicap.spouse      :spouse
+   :fiscal.information.handicap.dependent   :dependent
+   :fiscal.information.handicap.not         :not
+   :fiscal.information.handicap.undefined   :undefined
+
    :fiscal.information.number-of-dependents :number-of-dependents
 
    :type.contract :contract-type
@@ -119,10 +131,11 @@
                     :personal-data
                     :company-data
                     :personal.email
-                    :personal.phone
-                    :professional-email
-                    :professional-phone
-                    :cost-centers
+                    :pro.email
+                    :pro.telephone
+                    :fiscal.information.number.dependants
+                    :personal.telephone
+                    :cost.center
 
                     :salary
                     :expenses
@@ -133,10 +146,10 @@
                     :tags
                     :teams
                     :projects
-                    :job-position
+                    :job.role
                     :position
                     :job-description
-                    :approver
+                    :manager
                     :approver-name
                     :approver-email
 
@@ -175,10 +188,11 @@
                     :fiscal.information.income.payee.2-titulars
 
                     :fiscal.information.handicap
-                    :fiscal.information.spouse
-                    :fiscal.information.declarant
-                    :fiscal.information.dependent
-                    :fiscal.information.number-of-dependents
+                    :fiscal.information.handicap.declarant
+                    :fiscal.information.handicap.spouse
+                    :fiscal.information.handicap.dependent
+                    :fiscal.information.handicap.not
+                    :fiscal.information.handicap.undefined
 
                     ;; Acadmics
                     :academic.course
