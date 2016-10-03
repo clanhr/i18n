@@ -58,6 +58,12 @@
 
    :fiscal.information.number-of-dependents :number-of-dependents
 
+
+   :days.left.holidays          :enjoyedDays
+   :days.scheduled              :scheduledDays
+   :days.off.counter.free.days  :freeDays
+   :total                       :totalDays
+
    :type.contract :contract-type
    :contract.list.contract.type.fixed-term                       :fixed-term
    :contract.list.contract.type.no-term                          :no-term
@@ -212,13 +218,14 @@
                     :user-changes-excel-file
                     :users-excel-file
                     :type
-                    :totalDays
-                    :enjoyedDays
-                    :scheduledDays
-                    :freeDays
+
+                    :days.left.holidays
+                    :days.scheduled
+                    :days.off.counter.free.days
+                    :total
+
                     :start-date
                     :end-date
-                    :total
                     :unit
 
                     ;;contracts
