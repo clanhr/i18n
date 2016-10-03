@@ -25,8 +25,10 @@
    :academic.degree.masters-degree    :masters-degree
    :academic.degree.doctoral-degree   :doctoral-degree
 
+   :personal.email           :personal-email
+   :personal.phone           :personal-phone
 
-   :civil-status             :civil.status
+   :civil.status             :civil-status
    :civil.status.married     :married
    :civil.status.single      :single
    :civil.status.divorced    :divorced
@@ -116,8 +118,8 @@
 
                     :personal-data
                     :company-data
-                    :personal-email
-                    :personal-phone
+                    :personal.email
+                    :personal.phone
                     :professional-email
                     :professional-phone
                     :cost-centers
