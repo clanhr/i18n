@@ -43,7 +43,7 @@
    :civil.status.civil-union :civil-union
 
    :academic.course                         :school.school-course
-   :cost.center                             :cost-centers
+   :cost.center                             :cost-center
 
    :fiscal.information.income.payee            :income-owership
    :fiscal.information.income.payee.1-titular  :1-titular
