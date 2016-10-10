@@ -67,6 +67,7 @@
    :type.contract :contract-type
    :contract.list.contract.type.fixed-term                       :fixed-term
    :contract.list.contract.type.no-term                          :no-term
+   :contract.list.contract.type.no-term-partial                  :no-term-partial
    :contract.list.contract.type.intermittent                     :intermittent
    :contract.list.contract.type.intermittent-partial             :intermittent-partial
    :contract.list.contract.type.fixed-term-partial               :fixed-term-partial
@@ -238,6 +239,7 @@
                     :contract.list.contract.type.fixed-term
                     :contract.list.contract.type.fixed-term-partial
                     :contract.list.contract.type.no-term
+                    :contract.list.contract.type.no-term-partial
                     :contract.list.contract.type.intermittent
                     :contract.list.contract.type.intermittent-partial
                     :contract.list.contract.type.fixed-term-partial
