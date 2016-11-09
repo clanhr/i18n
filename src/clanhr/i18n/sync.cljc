@@ -134,6 +134,9 @@
                     :address.parish
                     :address.country-code
                     :address.country-name
+                    :groups
+                    :cost-centers
+
 
                     :personal-data
                     :company-data
