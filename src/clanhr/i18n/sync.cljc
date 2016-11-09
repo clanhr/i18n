@@ -62,7 +62,6 @@
    :days.left.holidays          :enjoyedDays
    :days.scheduled              :scheduledDays
    :days.off.counter.free.days  :freeDays
-   :total                       :totalDays
 
    :type.contract :contract-type
    :contract.list.contract.type.fixed-term                       :fixed-term
@@ -136,6 +135,7 @@
                     :address.country-name
                     :groups
                     :cost-centers
+                    :total
 
 
                     :personal-data
