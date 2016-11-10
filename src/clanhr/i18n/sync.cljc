@@ -136,6 +136,7 @@
                     :groups
                     :cost-centers
                     :total
+                    :totalDays
 
 
                     :personal-data
