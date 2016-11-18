@@ -84,6 +84,7 @@
    :contract.list.contract.type.unbounded-time-temporary         :unbounded-time-temporary
    :contract.list.contract.type.unbounded-time-temporary-partial :unbounded-time-temporary-partial
    :contract.list.contract.type.internship                       :internship
+   :contract.list.contract.type.indefinite-duration-full-time    :indefinite-duration-full-time
    })
 
 (def required-keys [
@@ -261,6 +262,7 @@
                     :contract.list.contract.type.unbounded-time-temporary
                     :contract.list.contract.type.unbounded-time-temporary-partial
                     :contract.list.contract.type.internship
+                    :contract.list.contract.type.indefinite-duration-full-time
 
                     ])
 
