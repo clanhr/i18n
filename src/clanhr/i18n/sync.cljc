@@ -85,9 +85,30 @@
    :contract.list.contract.type.unbounded-time-temporary-partial :unbounded-time-temporary-partial
    :contract.list.contract.type.internship                       :internship
    :contract.list.contract.type.indefinite-duration-full-time    :indefinite-duration-full-time
+
+   :expenses.consumables-and-supplies           :consumables-and-supplies
+   :expenses.accommodation                      :accommodation
+   :expenses.meals                              :meals
+   :expenses.travel-transportation              :travel-transportation
+   :expenses.tolls                              :tolls
+   :expenses.parking                            :parking
+   :expenses.fuel                               :fuel
+   :expenses.others                             :others
+
    })
 
 (def required-keys [
+
+                    ;; Expense Types
+                    :expenses.consumables-and-supplies
+                    :expenses.accommodation
+                    :expenses.meals
+                    :expenses.travel-transportation
+                    :expenses.tolls
+                    :expenses.parking
+                    :expenses.fuel
+                    :expenses.others
+
                     ;; Absence types
                     :abscence.type.vacations
                     :abscence.type.maternity-leave
@@ -286,6 +307,9 @@
         (parse-string true)
         (select-keys required-keys)
         (->> (map (fn [[k v]]
+                    (when (= k :accommodation)
+                      (prn "VAL: " v)
+                      )
                     [(map-new->old-keys k) v ]))
              (into {})
              (generate-code-file lang)
