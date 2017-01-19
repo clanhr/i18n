@@ -95,6 +95,11 @@
    :expenses.fuel                               :fuel
    :expenses.others                             :others
 
+   :expense.state.approved                      :approved
+   :expense.state.canceled                      :canceled
+   :expense.state.pending                       :pending
+   :expense.state.repproved                     :repproved
+
    })
 
 (def required-keys [
@@ -108,6 +113,11 @@
                     :expenses.parking
                     :expenses.fuel
                     :expenses.others
+
+                    :expense.state.approved
+                    :expense.state.canceled
+                    :expense.state.pending
+                    :expense.state.repproved
 
                     ;; Absence types
                     :abscence.type.vacations
