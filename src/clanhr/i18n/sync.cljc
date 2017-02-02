@@ -99,6 +99,7 @@
    :expense.state.canceled                      :canceled
    :expense.state.pending                       :pending
    :expense.state.repproved                     :repproved
+   :expense.state.deleted                       :deleted
 
    })
 
@@ -118,6 +119,7 @@
                     :expense.state.canceled
                     :expense.state.pending
                     :expense.state.repproved
+                    :expense.state.deleted
 
                     ;; Absence types
                     :abscence.type.vacations
