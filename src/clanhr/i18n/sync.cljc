@@ -297,6 +297,24 @@
                     :contract.list.contract.type.internship
                     :contract.list.contract.type.indefinite-duration-full-time
 
+                    ;Expenses report
+                    :user-expenses-report-title
+                    :interval
+                    :date
+                    :state
+                    :description
+                    :document-number
+                    :value
+                    :signature
+
+                    :expenses.consumables-and-supplies
+                    :expenses.accommodation
+                    :expenses.meals
+                    :expenses.travel-transportation
+                    :expenses.tolls
+                    :expenses.parking
+                    :expenses.fuel
+                    :expenses.others
                     ])
 
 (defn- generate-code-file
