@@ -315,6 +315,8 @@
                     :expenses.parking
                     :expenses.fuel
                     :expenses.others
+
+                    :user-expenses-excel-file
                     ])
 
 (defn- generate-code-file
