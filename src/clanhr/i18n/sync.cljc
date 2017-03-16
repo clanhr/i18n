@@ -86,6 +86,9 @@
    :contract.list.contract.type.internship                       :internship
    :contract.list.contract.type.indefinite-duration-full-time    :indefinite-duration-full-time
 
+   :expenses.view.general                       :expenses.general
+   :expenses.view.km.map                        :expenses.kms
+
    :expenses.consumables-and-supplies           :consumables-and-supplies
    :expenses.accommodation                      :accommodation
    :expenses.meals                              :meals
@@ -100,12 +103,14 @@
    :expense.state.pending                       :pending
    :expense.state.repproved                     :repproved
    :expense.state.deleted                       :deleted
-
    })
 
 (def required-keys [
 
                     ;; Expense Types
+                    :expenses.general
+                    :expenses.kms
+
                     :expenses.consumables-and-supplies
                     :expenses.accommodation
                     :expenses.meals
