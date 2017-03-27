@@ -101,6 +101,18 @@
    :expense.state.repproved                     :repproved
    :expense.state.deleted                       :deleted
 
+   :kmmap                                       :user-kms-report-title
+   :license.plate                               :license-plate
+   :kmmap.reason                                :reason
+   :kmmap.origin                                :origin
+   :kmmap.destination                           :destination
+   :kmmap.km.price                              :value-per-km
+   :kmmap.number.km                             :number-of-kms
+   :kmmap.total                                 :total-with-tax
+
+   :company.name                                :company-name
+   :company.address                             :company-address
+   :vat.number                                  :company-vat-number
    })
 
 (def required-keys [
@@ -181,6 +193,9 @@
                     :fiscal.information.number.dependants
                     :personal.telephone
                     :cost.center
+                    :company.name
+                    :company.address
+                    :vat.number
 
                     :salary
                     :expenses
@@ -297,7 +312,7 @@
                     :contract.list.contract.type.internship
                     :contract.list.contract.type.indefinite-duration-full-time
 
-                    ;Expenses report
+                    ;Expenses and kms report
                     :user-expenses-report-title
                     :interval
                     :date
@@ -317,6 +332,16 @@
                     :expenses.others
 
                     :user-expenses-excel-file
+                    :user-kms-excel-file
+
+                    :kmmap
+                    :license.plate
+                    :kmmap.reason
+                    :kmmap.origin
+                    :kmmap.destination
+                    :kmmap.km.price
+                    :kmmap.number.km
+                    :kmmap.total
                     ])
 
 (defn- generate-code-file
