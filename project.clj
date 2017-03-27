@@ -1,4 +1,4 @@
-(defproject clanhr/i18n "2.25.0"
+(defproject clanhr/i18n "2.26.0"
   :description "ClanHR's i18n support"
   :url "https://github.com/clanhr/i18n"
   :dependencies [[org.clojure/clojure "1.8.0"]
