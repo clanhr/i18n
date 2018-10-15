@@ -100,6 +100,7 @@
    :expense.state.pending                       :pending
    :expense.state.repproved                     :repproved
    :expense.state.deleted                       :deleted
+   :expense.state.paid                          :paid
 
    :kmmap                                       :user-kms-report-title
    :license.plate                               :license-plate
@@ -132,6 +133,7 @@
                     :expense.state.pending
                     :expense.state.repproved
                     :expense.state.deleted
+                    :expense.state.paid
 
                     ;; Absence types
                     :abscence.type.vacations
