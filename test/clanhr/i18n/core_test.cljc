@@ -17,8 +17,4 @@
   (testing "Portuguese language"
     (is (= "Férias" (i18n/t "pt" "absence-vacations")))
     (is (= "Férias" (i18n/t "pt" :absence-vacations)))
-    (is (= "Férias" (i18n/t :pt "absence-vacations"))))
-  (testing "Spanish language"
-    (is (= "Vacaciones" (i18n/t "es" "absence-vacations")))
-    (is (= "Vacaciones" (i18n/t "es" :absence-vacations)))
-    (is (= "Vacaciones" (i18n/t :es "absence-vacations")))))
+    (is (= "Férias" (i18n/t :pt "absence-vacations")))))
